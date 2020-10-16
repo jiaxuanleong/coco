@@ -43,14 +43,11 @@ macro "Count Colonies" {
 	areaname = Dialog.getString();
 	done = Dialog.getCheckbox();
 	while (!done) {
-		Dialog.addMessage("Using area selection tools eg. rectangle, circle etc., define the area for colony counting, then give a name for the label.");
-		Dialog.addCheckbox("Done", 0);
-		Dialog.addString("Name area", "Xcv control no.1");
 		Dialog.show();
 		areaname = Dialog.getString();
 		done = Dialog.getCheckbox();
 	}
-	run("Find Maxima...", prominence + " exclude output=[Point Selection]");
+	run("Find Maxima...", "prominence=" + prominence + " exclude output=[Point Selection]");
 	run("Point Tool...", "type=Dot color=Red size=Tiny");
 	setTool("multipoint");
 	Dialog.createNonBlocking("Cleanup points");
