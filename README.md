@@ -1,4 +1,4 @@
-# coco
+# CoCo
 Bacterial colony counter written in ImageJ macro language
 
 This macro enables easy counting of bacterial colonies on Petri plates. 
