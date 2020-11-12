@@ -22,7 +22,7 @@ macro "Process Image" {
 	run("Subtract Background...", "rolling=30");
 	run("Mean...", "radius=1");
 	run("Enhance Contrast...", "saturated=0.3 normalize");
-	run("Multiply...", "value=2");
+	//run("Multiply...", "value=2");
 	run("Select None");
 	setTool("rectangle");
 }
