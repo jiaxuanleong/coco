@@ -5,14 +5,15 @@
 
 //global variables
 var dir; //directory of image
-var prominence = 20;
+var prominence = 40;
 var areaname = "area name";
 //
 
-macro "Process Image" {
+macro "Process Image [f1]" {
 	dir = getDirectory("image");
 	img = getTitle();
 	//dir = getDirectory(ori);
+	setTool("rectangle");
 	waitForUser("Crop image if needed");
 	run("Split Channels");
 	selectWindow(img + " (red)");
@@ -27,7 +28,7 @@ macro "Process Image" {
 	setTool("rectangle");
 }
 
-macro "Count Colonies" {
+macro "Count Colonies [f2]" {
 	run("Select None");
 	/*
 	 * Area selection and counting
