@@ -6,7 +6,7 @@ Images are first processed in using standard ImageJ commands such as Subtract Ba
 Then the user is prompted to select area of interest, and the Find Maxima command is used to automatically count colonies.
 The user can modify the detected colonies to enable more accurate colony counting.
 
-**CoCo User Guide**
+# **CoCo User Guide**
 
 the colony counter ImageJ macro
 
