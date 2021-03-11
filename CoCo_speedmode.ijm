@@ -8,7 +8,7 @@
 var dir; //directory of image
 var prominence = 40;
 var areaname = "area name";
-var biorep = 0;
+var biorep = 1;
 //
 
 macro "Process Image [f1]" {
@@ -41,15 +41,15 @@ macro "Count Colonies [f2]" {
 	Dialog.createNonBlocking("Define area");
 	Dialog.addNumber("Find Maxima, Prominence", prominence);
 	Dialog.addString("Name area", areaname);
-	if (biorep == 6)
-		biorep = 0;
-	Dialog.addNumber("Biorep", biorep+1);
+	if (biorep == 7)
+		biorep = 1;
+	Dialog.addNumber("Biorep", biorep);
 	Dialog.show();
 	
 	prominence = Dialog.getNumber();
 	areaname = Dialog.getString();
 	biorep = Dialog.getNumber();
-
+	
 	run("Find Maxima...", "prominence=" + prominence + " exclude output=[Point Selection]");
 	run("Point Tool...", "type=Dot color=Red size=Tiny");
 	setTool("multipoint");
@@ -61,6 +61,7 @@ macro "Count Colonies [f2]" {
 	run("Measure");
 	colonyno = Table.size("Results");
 	print(areaname + " " + biorep + ", " + colonyno); 
+	biorep += 1;
 	close("Results");
 	selectWindow("Log");
 }
