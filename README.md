@@ -7,13 +7,6 @@ Then the user is prompted to select area of interest, and the Find Maxima comman
 The user can modify the detected colonies to enable more accurate colony counting.
 
 # **CoCo User Guide**
-
-the colony counter ImageJ macro
-
-author: Jia Xuan Leong
-
-updated 2021.03.11
-
 ## Experimental Setup
 
 This is an example of a standard bacterial growth experiment which CoCo was optimized for. CoCo can also be used as a standard counter of colonies on agar plates.
